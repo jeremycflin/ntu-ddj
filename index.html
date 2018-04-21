@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Data driven journalism</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+		<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic,600italic' rel='stylesheet' type='text/css'>
+   		<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+  </head>
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<style>
+	.slides{
+		font-family: "蘋果麗中黑" !important;
+	}
+
+	h1 {
+		font-family: "華文細黑" !important;
+	}
+
+	img{
+		border:0px !important;
+	}
+
+	.margin-fixeds{
+		margin-top: -0px !important;
+	}
+
+	#goodEx{
+		margin-left: 30px;
+	}
+
+	.highlight{
+		color: #e6003c;
+
+	}
+
+
+
+	</style>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>美國數位敘事趨勢以及資料視覺化</h1>
+					<p><small>林辰峰 Jeremy C.F. Lin</small></p>
+				</section>
+
+				<section>
+					<h3>我是誰？</h3>
+					<p>Graphics reporter（圖像記者）@ POLITICO</p>
+					<a href="http://jeremycflin.github.io/" target="blank">
+						<img  data-src="assets/jeremy.jpg" height="400px">
+					</a>
+				</section>
+
+				<section>
+					<h3>選舉即時開票與數據分析</h3>
+					<a href="https://www.politico.com/interactives/elections/2017/alabama/special-election/dec-12/" target="blank">
+						<img  data-src="assets/alabama.png" height="600px">
+					</a>
+				</section>
+
+				<section>
+					<h3>圖像報導</h3>
+					<a href="https://www.politico.com/interactives/2017/confederate-monuments-statues-and-symbols-in-the-south/" target="blank">
+						<img  data-src="assets/confederate.png" height="600px">
+					</a>
+				</section>
+
+				<section>
+					<h3>互動新聞</h3>
+					<a href="https://www.politico.com/news/interactives" target="blank" >
+						<video loop autoplay controls>
+					  <source src="assets/russia.mp4" height="400px" type="video/mp4">
+					  Your browser does not support the video tag.
+					</video>
+					</a>
+				</section>
+
+				<section>
+					<h3>排版</h3>
+						<a href="https://www.politico.com/interactives/2018/infrastructure-timeline/" target="blank" >
+						<video loop autoplay controls>
+					  <source src="assets/timeline.mp4" height="300px" type="video/mp4">
+					  Your browser does not support the video tag.
+						</video>
+						</a>
+				</section>
+
+				<section>
+					<h3>民調分析</h3>
+					<a href="https://www.politico.com/interactives/2017/politico-morning-consult-poll/" target="blank">
+						<img  data-src="assets/poll.png" height="600px">
+					</a>
+				</section>
+
+				<section>
+					<h3>設計</h3>
+					<a href="https://www.politico.com/interactives/2017/obama-hezbollah-drug-trafficking-investigation/" target="blank">
+						<img  data-src="assets/hezbollah.png" height="600px">
+					</a>
+				</section>
+
+				<section>
+					<h3>資料視覺化</h3>
+					<a href="https://www.politico.com/interactives/2017/35-percent-corporate-tax-rate-100-companies/" target="blank">
+						<img  data-src="assets/tax.png" height="300px">
+					</a>
+				</section>
+				<section>
+					<h3>地圖</h3>
+					<a href="http://jeremycflin.github.io/maps.html" target="blank">
+						<img  data-src="assets/mapGuide.png" height="600px">
+					</a>
+				</section>
+				<section>
+					<h2>數位敘事趨勢</h2>
+					<h4>減少互動</h4>
+					<h4>社論以及讀者投書視覺化</h4>
+					<h4>模板加速產製速度</h4>
+					<h4>Climate change</h4>
+					<h4>利用視覺元素做調查報導</h4>
+				</section>
+				<section>
+					<h3>減少互動</h3>
+					<ul>
+						<li>If you make the reader click or do anything other than scroll, <span class="highlight">something spectacular has to happen</span></li>
+						<li> If you make a tooltip or rollover, assume no one will ever see it. <span class="highlight">If content is important for readers to see, don't hide it</span></li>
+						<li>When deciding whether to make something interactive, remember that getting it to work on all platforms is <span class="highlight">expensive</span></li>
+					</ul>
+					<p><small>延伸閱讀：<a href="https://github.com/archietse/malofiej-2016/blob/master/tse-malofiej-2016-slides.pdf" target="blank">Why are we doing fewer interactives</a></small></p>
+				</section>
+				<section>
+					<h3>減少點擊，若非點不可，必須獎勵豐厚</h3>
+					<p><small>2012</small></p>
+					<a href="http://www.nytimes.com/interactive/2012/09/23/opinion/sunday/the-new-world.html?smid=tw-share" target="blank"><img  data-src="assets/new_assets/old.png" height="500px"></a>
+				</section>
+				<section>
+					<h3>減少點擊，若非點不可，必須獎勵豐厚</h3>
+					<p><small>2015</small></p>
+					<a href="http://www.nytimes.com/interactive/2015/11/21/world/middleeast/inside-raqqa-capital-of-isis.html?smid=pl-share" target="blank"><img  data-src="assets/new_assets/new.gif" height="500px"></a>
+				</section>
+				<section>
+					<h3>用滾動取代點擊</h3>
+					<ul>
+						<li>Scrolling（往下滾動）<span class="highlight">符合讀者使用電腦以及手機的習慣</span></li>
+						<li>沒有讀者喜歡點點去，尤其是當讀者在使用手機時</li>
+						<li>Scrolling的<span class="highlight">線性</span>天性尤其適合新聞內容呈現</li>
+					</ul>
+					<p><small>延伸閱讀：<a href="https://bost.ocks.org/mike/scroll/" target="blank">How to Scroll by Mike Bostock</a>, <a href="https://pudding.cool/process/responsive-scrollytelling/" target="blank">Responsive scrollytelling best practices</a></small></p>
+				</section>
+				<section>
+					<h3>用滾動取代點擊</h3>
+					<a href="http://www.nytimes.com/interactive/2015/09/30/business/how-the-us-and-opec-drive-oil-prices.html?_r=0" target="blank"><img  data-src="assets/new_assets/oil.gif" height="500px"></a>
+				</section>
+				<section>
+					<h3>當滾動成為敘事的一部分</h3>
+					<p><small>讀者不用停下來去學習，閱讀也不會被干擾</small></p>
+					<a href="http://www.nytimes.com/interactive/2014/09/14/sports/baseball/jeter-swings.html" target="blank"><img  data-src="assets/new_assets/baseball.gif" height="500px"></a>
+				</section>
+				<section>
+					<h3>當滾動成為敘事的一部分</h3>
+					<p><small>讀者不用停下來去學習，<span class="highlight">閱讀也不會被干擾</span></small></p>
+					<a href="http://www.nytimes.com/interactive/2014/09/19/travel/reif-larsen-norway.html" target="blank"><img  data-src="assets/new_assets/norway.gif" height="600px"></a>
+				</section>
+				<section>
+					<h3>滾定也能用在攝影集中</h3>
+					<p>過去攝影集通常都是用點的，現在連攝影集都是用滾動的</p>
+					<a href="http://www.nytimes.com/interactive/2016/03/19/world/americas/cuba-on-the-edge-of-change-photo-essay.html?hp&action=click&pgtype=Homepage&clickSource=story-heading&module=b-lede-package-region&region=top-news&WT.nav=top-news&_r=0" target="blank"><img  data-src="assets/new_assets/photo.png" height="500px"></a>
+				</section>
+				<section>
+					<h3>Tooltips減少使用</h3>
+					<ul>
+						<li><span class="highlight">無法手機顯示</span></li>
+						<li>讀者根本不會點</li>
+						<li>不要將資訊藏在互動裡</li>
+					</ul>
+				</section>
+				<section>
+					<h3>先假定讀者不會滑移滑鼠去看隱藏訊息</h3>
+					<a href="http://www.nytimes.com/interactive/2016/02/26/us/race-of-american-power.html" target="blank"><img  data-src="assets/new_assets/tooltip.png" height="400px"></a>
+				</section>
+				<section>
+					<h3>純平面資料視覺化的再興起</h3>
+					<ul>
+						<li>手機上顯示迅速</li>
+						<li><span class="highlight">較不花時間製作</span></li>
+						<li>佔用新聞室資源較少</li>
+						<li><a href="http://ai2html.org/" target="black">ai2html</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3>純平面資料視覺化的再興起</h3>
+					<a href="http://www.nytimes.com/interactive/2015/09/14/world/middleeast/syria-war-deaths.html" target="blank"><img  data-src="assets/new_assets/static.png" height="600px"></a>
+				</section>
+				<section>
+					<h3>小短片與Gif</h3>
+					<ul>
+						<li>容易<span class="highlight">分享</span></li>
+						<li>畫面變化不多時，<span class="highlight">可以不斷加強讀者印象</span></li>
+						<li>常被拿來做解釋性新聞</li>
+					</ul>
+					<p><small>延伸閱讀：<a href="https://www.propublica.org/nerds/item/on-repeat-how-to-use-loops-to-explain-anything/" target="blank">On Repeat: How to Use Loops to Explain Anything by Lena Groeger</a></small></p>
+				</section>
+				<section>
+					<h3>小短片與Gif</h3>
+					<a href="http://www.nytimes.com/interactive/2015/12/16/upshot/fed-interest-rates-rube-goldberg-machine.html" target="blank"><img  data-src="assets/new_assets/fed.gif" height="600px"></a>
+				</section>
+				<section>
+					<h3>小短片與Gif</h3>
+					<a href="http://www.ft.com/intl/cms/s/2/98ce14ee-99a6-11e5-95c7-d47aa298f769.html#axzz43VOILrlR" target="blank"><img  data-src="assets/new_assets/ft.gif" height="400px"></a>
+				</section>
+				<section>
+					<h3>用圖表以外的方式製作資料視覺化</h3>
+					<a href="http://www.nytimes.com/interactive/2015/10/11/us/politics/2016-presidential-election-super-pac-donors.html" target="blank"><img  data-src="assets/new_assets/power.gif" height="500px"></a>
+					<!-- <a href="http://www.nytimes.com/interactive/2015/10/11/us/politics/2016-presidential-election-super-pac-donors.html" target="blank" ><img  data-src="assets/new_assets/power2.png" height="300px" width="500px" ></a> -->
+				</section>
+				<section>
+					<h3>用圖表以外的方式製作資料視覺化</h3>
+					<a href="http://www.nytimes.com/interactive/2015/05/21/us/your-contribution-to-the-california-drought.html" target="blank"><img  data-src="assets/new_assets/water.gif" height="500px"></a>
+				</section>
+				<section>
+					<h3>社論以及讀者投書視覺化</h3>
+					<p><small>Editorial</small></p>
+					<a href="https://www.nytimes.com/interactive/2017/12/19/opinion/women-guns-domestic-violence.html" target="blank"><img  data-src="assets/new_assets/women-life.gif" height="500px"></a>
+				</section>
+				<section>
+					<h3>社論以及讀者投書視覺化</h3>
+					<p><small>OP-ED</small></p>
+					<a href="https://www.nytimes.com/interactive/2017/11/10/opinion/sunday/wildest-place-in-america.html" target="blank"><img  data-src="assets/new_assets/wildlife.gif" height="500px"></a>
+				</section>
+				<section>
+					<h3>模板加速產製速度</h3>
+						<a href="https://www.politico.com/interactives/2018/infrastructure-timeline/" target="blank" >
+						<video loop autoplay controls>
+					  <source src="assets/timeline.mp4" height="300px" type="video/mp4">
+					  Your browser does not support the video tag.
+						</video>
+						</a>
+				</section>
+				<section>
+					<h3>模板加速產製速度</h3>
+					<a href="http://www.nytimes.com/interactive/2015/05/21/us/your-contribution-to-the-california-drought.html" target="blank"><img  data-src="assets/trump-template2.png" height="500px"></a>
+				</section>
+				<section>
+					<h3>Climate Change成大媒體兵家必爭之地</h3>
+					<a href="https://www.nytimes.com/interactive/2017/05/18/climate/antarctica-ice-melt-climate-change.html" target="blank"><img  data-src="assets/new_assets/climate1.gif" height="500px"></a>
+				</section>
+				<section>
+					<h3>Climate Change成大媒體兵家必爭之地</h3>
+					<a href="https://www.bloomberg.com/graphics/2015-whats-warming-the-world/" target="blank"><img  data-src="assets/new_assets/climate2.gif" height="300px"></a>
+				</section>
+				<section>
+					<h3>利用視覺元素做調查報導</h3>
+					<a href="https://www.washingtonpost.com/graphics/world/north-korea-targets/?utm_term=.cf0e973c04a9" target="blank"><img  data-src="assets/new_assets/map-of-death.gif" height="300px"></a>
+				</section>
+				<section>
+					<h3>利用視覺元素做調查報導</h3>
+					<a href="https://www.washingtonpost.com/graphics/world/north-korea-targets/?utm_term=.cf0e973c04a9" target="blank"><img  data-src="assets/new_assets/turkey.gif" height="300px"></a>
+				</section>
+
+				
+
+				<section>
+					<h3>workflow</h3>
+					<img  data-src="assets/new_assets/workflow.jpg">
+				</section>
+				<section>
+					<h3>workflow</h3>
+					<p>You think it's done? NOT YET</p>
+					<img src="http://media.giphy.com/media/IV2DvTArF5b9u/giphy.gif" width="480" height="480" alt="meltdown" >
+				</section>
+				<section>
+					<h3>行銷你的作品</h3>
+					<img  data-src="assets/new_assets/workflow2.jpg">
+				</section>
+				<section>
+					<h3>Homepage promo</h3>
+					
+					<img src="assets/new_assets/promo.png"height="550" alt="meltdown" >
+				</section>
+				<section>
+					<h3>案例探討1</h3>
+					<a href="https://www.politico.com/news/interactives" target="blank" >
+						<video loop autoplay controls>
+					  <source src="assets/russia.mp4" height="400px" type="video/mp4">
+					  Your browser does not support the video tag.
+						</video>
+						</a>
+				</section>
+				<section>
+						<h3>案例探討2</h3>
+						<a href="http://www.nytimes.com/interactive/2016/02/04/us/flint-water-lead-maps.html?smid=pl-share&_r=0" target="blank"><img  data-src="assets/flint.png" height="550px"></a>
+				</section>
+			
+
+					
+					
+					
+
+
+					
+					
+					
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
